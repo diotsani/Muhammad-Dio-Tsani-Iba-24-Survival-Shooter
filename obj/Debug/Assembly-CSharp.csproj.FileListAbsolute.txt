@@ -1,2 +1,0 @@
-D:\STUDI INDEPENDEN\Chapter 7 - Survival Shooter\Survival Shooter\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
-D:\STUDI INDEPENDEN\Chapter 7 - Survival Shooter\Survival Shooter\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
