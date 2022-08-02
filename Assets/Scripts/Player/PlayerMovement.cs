@@ -4,6 +4,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float speed = 6f;
+    public float maxSpeed;
     Vector3 movement;
     Animator anim;
     Rigidbody playerRigidbody;
@@ -20,6 +21,8 @@ public class PlayerMovement : MonoBehaviour
 
         //Mendapatkan komponen Rigidbody
         playerRigidbody = GetComponent<Rigidbody>();
+
+        maxSpeed = speed * 2f;
     }
 
     private void FixedUpdate()

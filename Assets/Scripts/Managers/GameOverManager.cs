@@ -12,6 +12,8 @@ public class GameOverManager : MonoBehaviour
     Animator anim;
     float restartTimer;
 
+    bool isGameOver;
+
     void Awake()
     {
         anim = GetComponent<Animator>();
@@ -22,8 +24,6 @@ public class GameOverManager : MonoBehaviour
     {
         if (playerHealth.currentHealth <= 0)
         {
-            anim.SetTrigger("GameOver");
-
             restartTimer += Time.deltaTime;
 
             if (restartTimer >= restartDelay)
@@ -31,6 +31,17 @@ public class GameOverManager : MonoBehaviour
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
         }
+
+        if(playerHealth.currentHealth <= 0 && !isGameOver)
+        {
+            GameOver();
+        }
+    }
+
+    public void GameOver()
+    {
+        anim.SetTrigger("GameOver");
+        isGameOver = true;
     }
 
     public void ShowWarning(float enemyDistance)

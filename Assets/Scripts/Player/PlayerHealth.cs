@@ -19,7 +19,7 @@ public class PlayerHealth : MonoBehaviour
     PlayerMovement playerMovement;
 
     //PlayerShooting playerShooting;
-    bool isDead;                                                
+    public bool isDead;                                                
     bool damaged;                                               
 
 
@@ -47,7 +47,7 @@ public class PlayerHealth : MonoBehaviour
             //Fade out damage image
             damageImage.color = Color.Lerp(damageImage.color, Color.clear, flashSpeed * Time.deltaTime);
         }
-
+        healthSlider.value = currentHealth;
         //Set damage to false
         damaged = false;
     }

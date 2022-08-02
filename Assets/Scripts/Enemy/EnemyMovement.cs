@@ -2,7 +2,7 @@
 
 public class EnemyMovement : MonoBehaviour
 {
-    Transform player;
+    public Transform player;
     PlayerHealth playerHealth;
     EnemyHealth enemyHealth;
     UnityEngine.AI.NavMeshAgent nav;
