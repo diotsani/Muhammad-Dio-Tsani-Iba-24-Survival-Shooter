@@ -27,7 +27,7 @@ public class PowerUpSpeed : MonoBehaviour
     {
         if(collision.gameObject.tag =="Player")
         {
-            playerMovement.speed = playerMovement.maxSpeed;
+            playerMovement.speed = playerMovement.speed*2;
             Destroy(obj);
         }
     }
